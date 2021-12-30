@@ -12,7 +12,9 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(/*windowWidth,windowHeight*/400,400);
+  createCanvas(windowWidth,windowHeight);
+
+  frameRate(100);
 
   a = createSprite(width/2,height-15,width-10,20);
   a.shapeColor = rgb(0,0,0);
@@ -21,7 +23,7 @@ function setup() {
   e.addAnimation("dd",g);
   e.addAnimation("ddd",f);
   e.addAnimation("dddd",d);
-  e.scale = 1;
+  e.scale = 0.7;
   
   
   b = createButton("HEADS");
@@ -46,8 +48,6 @@ function setup() {
  // h.style('height', '100px');
   h.style('background', 'orange');
   h.style('font-size', '40px');
-
-  frameRate(60);
 }
 
 function draw() {
@@ -78,7 +78,7 @@ function draw() {
     
     e.changeAnimation("dddd",d);
     e.velocityY = j;
-    j+=0.5;
+    j+=0.8;
 
     if(e.collide(a)) {
       rand = Math.round(random(1,2));
@@ -123,7 +123,7 @@ function draw() {
     });
   }
 
-  text(getFrameRate(),400,400);
+  //text(mouseX+";"+mouseY,400,400);
 
   drawSprites();
 }
