@@ -123,7 +123,7 @@ function draw() {
     });
   }
 
-  text(frameCount,400,400);
+  text(getFrameRate(),400,400);
 
   drawSprites();
 }
