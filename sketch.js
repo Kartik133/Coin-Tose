@@ -1,7 +1,7 @@
 var a,b,c,d,e,f,g,h,i,k;
 var gameState = "start";
 var x,xx;
-var j = -12;
+var j = -20;
 
 function preload() {
   g =  loadAnimation("e.png");
@@ -46,6 +46,8 @@ function setup() {
  // h.style('height', '100px');
   h.style('background', 'orange');
   h.style('font-size', '40px');
+
+  frameRate(60);
 }
 
 function draw() {
@@ -76,7 +78,7 @@ function draw() {
     
     e.changeAnimation("dddd",d);
     e.velocityY = j;
-    j+=0.8;
+    j+=0.5;
 
     if(e.collide(a)) {
       rand = Math.round(random(1,2));
@@ -116,12 +118,12 @@ function draw() {
      }
 
     h.mousePressed(()=>{
-      j = -12;
+      j = -20;
       gameState = "start";
     });
   }
 
-  text(frameCount,400,400);
+  //text(mouseX+";"+mouseY,400,400);
 
   drawSprites();
 }
