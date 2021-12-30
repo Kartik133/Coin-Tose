@@ -12,7 +12,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+  createCanvas(/*windowWidth,windowHeight*/400,400);
 
   a = createSprite(width/2,height-15,width-10,20);
   a.shapeColor = rgb(0,0,0);
